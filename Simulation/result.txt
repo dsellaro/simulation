@@ -1,0 +1,20 @@
+-------fifo--------------------
+Duration(s) = 1.04550845527E11
+Total message processed = 2425
+Total remaining tasks = 12914
+makespan(s) = 4.3113750732783504E7
+-------rr----------------------
+Duration(s) = 1.02314983105E11
+Total message processed = 3797
+Total remaining tasks = 16991
+makespan(s) = 2.6946268924150646E7
+-------rr_preemp----------------
+Duration(s) = 1.05875390456E11
+Total message processed = 8359
+Total remaining tasks = 12691
+makespan(s) = 1.2666035465486303E7
+
+Duration(s) = 1.00208267291E11
+Total message processed = 11339
+Total remaining tasks = 893
+makespan(s) = 8837487.193844255
