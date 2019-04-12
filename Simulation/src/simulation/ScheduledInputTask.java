@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ScheduledInputTask {
     
-    public static void scheduledinputtask(int task)
+    public static void scheduledinputtask()
     {
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
         QueueAddInput queueinput1 = new QueueAddInput ();

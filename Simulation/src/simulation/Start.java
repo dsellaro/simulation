@@ -33,8 +33,8 @@ public class Start {
     public static int tottask = numinstance;
 
 //    public static String policy = "FIFO";// usa Fifo
-    public static String policy = "RR";//usa RR
-//    public static String policy = "RRp";//usa RR com preempcao
+//    public static String policy = "RR";//usa RR
+    public static String policy = "RRp";//usa RR com preempcao
 
     public static final Queue<Integer>[] queues = new Queue[numtask + 1];
 
@@ -96,7 +96,7 @@ public class Start {
             System.out.println("\n*End Simulation*\n");
 
             if (messproc > 0) {
-                avgmakespan = totmakespan / messproc;
+                avgmakespan = (totmakespan/ messproc)/1000000000;
             }
 
             
@@ -104,7 +104,7 @@ public class Start {
             System.out.println("Total remaining tasks = " + tasksrem);
             System.out.println("makespan(s) = " + avgmakespan);
 
-            simulationText.append(messproc).append(" ").append(tasksrem).append(" ").append(totmakespan).append("\n");    
+            simulationText.append(messproc).append(" ").append(tasksrem).append(" ").append(avgmakespan).append("\n");    
             GravarArquivo(simulationFile, simulationText.toString());
             
             avgmakespan = 0; totmakespan = 0; messproc = 0; tasksrem = 0; duration = 0;

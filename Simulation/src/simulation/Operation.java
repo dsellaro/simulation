@@ -21,7 +21,7 @@ public class Operation implements Runnable {
         Random rad = new Random(); //Simula execução da tarefa com tempo de execução variavel
          
         t = ptask -1;
-        
+         
         if (execrandom){ //execucao randomica
         //gera tempo de execução da tarefa aleatoriamente          
             time = rad.nextInt(texec) + 1;

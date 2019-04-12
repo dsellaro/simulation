@@ -29,7 +29,7 @@ public class NextTask {
             minimum = task + 1;
             range = maximum - minimum + 1;
             nexttask = r.nextInt(range) + minimum; 
-            scheduledinputtask(nexttask);
+            scheduledinputtask();
         }
         //gera indicação da prox tarefa conforme profile configurado para o processo de integracao 
         else{
@@ -48,7 +48,7 @@ public class NextTask {
                 {
                     nexttask = VetorNextTask[t][0];
                     queueadd(nexttask);
-                    scheduledinputtask(nexttask);
+                    scheduledinputtask();
                     break;
                 }
                 case 1: case 2 : // tarefa fork que pode ser {{"and"},{"or"},{"and","or"}}
@@ -64,14 +64,14 @@ public class NextTask {
 
                         nexttask = r.nextInt(VetorNextTask[t].length);
                         queueadd(nexttask);
-                        scheduledinputtask(nexttask);
+                        scheduledinputtask();
                     } 
                     else {
                         if ("and".equals(oper_rad)) {// tarefa fork ={"and"}
                             for (int i = 1; i < VetorNextTask[t].length; i++){
                                 nexttask = VetorNextTask[t][i];
                                 queueadd(nexttask);
-                                scheduledinputtask(nexttask);
+                                scheduledinputtask();
                             }    
                         } 
                     }
